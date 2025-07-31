@@ -13,7 +13,7 @@ class Room(models.Model):
     title = models.CharField(max_length=100)
     description = models.TextField()
     price = models.PositiveIntegerField()
-    image = models.ImageField(upload_to='rooms/', blank=True, null=True)
+    image = models.ImageField(upload_to='rooms', blank=True, null=True)
     capacity = models.PositiveBigIntegerField(default=2)
     type = models.CharField(max_length=20, choices=ROOM_TYPES, default='standard')
 

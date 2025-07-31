@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    {% for room in rooms %}
+        <div class="containtment">
+            <div class="container">
+            <img src="{{room.image}}" alt="">
+            <h2>{{room.title}}</h2>
+            <p>{{room.type}}</p>
+            <p>{{room.capacity}}</p>
+            <p>{{room.description}}</p>
+            <p>${{room.price}}</p>
+            <a href="/book"></a>
+        </div>
+        </div>
+        
+    {% endfor %}
+{% endblock content %}
