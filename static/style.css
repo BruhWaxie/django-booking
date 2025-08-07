@@ -3,17 +3,3 @@ body {
     margin: 0;
 }
 
-.containtment {
-    display: flex;
-    
-}
-
-.container {
-    background: beige;
-    width: 300px;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    margin: 10px;
-    
-}

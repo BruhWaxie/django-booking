@@ -2,15 +2,13 @@
 
 {% block content %}
     {% for room in rooms %}
-        <div class="containtment">
-            <div class="container">
-            <img src="{{room.image}}" alt="">
-            <h2>{{room.title}}</h2>
-            <p>{{room.type}}</p>
-            <p>{{room.capacity}}</p>
-            <p>{{room.description}}</p>
-            <p>${{room.price}}</p>
-            <a href="/book"></a>
+        <div class="card" style="width: 18rem;">
+        <img src="{{ room.image.url }}" class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">{{ room.title }}</h5>
+            <p class="card-text">{{ room.description }}</p>
+            <p class="card-text">${{room.price}}</p>
+            <a href="#" class="btn btn-primary">Book a room</a>
         </div>
         </div>
         
