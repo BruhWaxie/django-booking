@@ -1,5 +1,18 @@
-body {
+body{
     box-sizing: border-box;
     margin: 0;
+    background-color: beige !important;
+
+}
+.wrapper {
+    
+    gap: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
 }
 
+img {
+    border-radius: 3vw;
+}

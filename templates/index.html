@@ -1,16 +1,27 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    {% for room in rooms %}
+    <header>
+        <h1 class="text-center mb-5">Avaliable Rooms</h1>
+    </header>
+    <div class="wrapper">
+        {% for room in rooms %}
+
         <div class="card" style="width: 18rem;">
-        <img src="{{ room.image.url }}" class="card-img-top" alt="...">
-        <div class="card-body">
-            <h5 class="card-title">{{ room.title }}</h5>
-            <p class="card-text">{{ room.description }}</p>
-            <p class="card-text">${{room.price}}</p>
-            <a href="#" class="btn btn-primary">Book a room</a>
-        </div>
+            <img src="{{ room.image.url }}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">{{ room.title }}</h5>
+                <p class="card-text">{{ room.description }}</p>
+
+                <p class="card-text">${{room.price}}</p>
+                <a href="{% url 'room_info' room.id %}" class="btn stretched-link">Book a room</a>
+                
+
+                
+            </div>
         </div>
         
-    {% endfor %}
+        {% endfor %}
+    </div>
+
 {% endblock content %}

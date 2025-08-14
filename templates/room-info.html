@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <div class="row">
+        <div class="col">
+            <img class="img-fluid" src="{{room.image.url}}" alt="">
+        </div>
+        <div class="col">
+            <h1>Room #{{room.title}}</h1>
+            <h2>${{room.price}}</h2>
+            <p>Type: {{room.type}}</p>
+            <p>Capacity: {{room.capacity}}</p>
+            <p>{{room.description}}</p>
+            <a href="# btn btn-primary">Book</a>
+        </div>
+    </div>
+{% endblock content %}
